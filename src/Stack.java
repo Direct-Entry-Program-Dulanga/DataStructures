@@ -1,6 +1,15 @@
 public class Stack {
 
+    private int[] arrnumber;
+
     public void push(int n){
+
+            int[] temp = new int[arrnumber.length+1];
+            for (int i = 0; i < arrnumber.length; i++) {
+                temp[i] = arrnumber[i];
+            }
+            temp[temp.length-1] = n;
+            arrnumber = temp;
 
     }
 
