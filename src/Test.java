@@ -16,7 +16,13 @@ public class Test {
         stack.pop();
         System.out.println(" ");
         stack.print();
+        System.out.println("");
+        System.out.println("Peek: "+stack.peek());
 
+        System.out.println("");
+        System.out.println("clear: ");
+        stack.clear();
+        stack.print();
 
     }
 }

@@ -7,7 +7,6 @@ public class Stack {
         if(stack == null){
             stack = new int[1];
             stack[0] = n;
-            System.out.println("push"+stack[0]);
         }else{
             int[] temp = new int[stack.length+1];
             for (int i = 0; i < stack.length; i++) {
@@ -35,35 +34,37 @@ public class Stack {
     }
 
     public boolean empty(){
-        if (stack ==null){
-            System.out.println("Stack is Empty");
-            return true;
-        }
-        else{
-            return false;
-        }
+        return stack == null;
     }
 
     public int peek(){
-        return 0;
+        if (empty()){
+            System.err.println("Stack is empty");
+        }
+        return stack[stack.length - 1];
     }
 
     public void clear(){
+        stack = null;
+    }
 
+    public int size(){
+        return empty() ? 0 :  stack.length;
     }
 
     public void print(){
         if(empty()){
             System.out.println("[]");
+            return;
         }
-        System.out.print("[");
+        System.out.print("[\n");
         for (int i = stack.length - 1; i >= 0 ; i--) {
-            System.out.print(stack[i]+" ");
+            System.out.println(stack[i]+" ");
         }
         System.out.print("\b\b]");
+        System.out.println("");
     }
 
-    public boolean contains(int n){
-        return true;
+    public boolean contains(int n) {
     }
 }
