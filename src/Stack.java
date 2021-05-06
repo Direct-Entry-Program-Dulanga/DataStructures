@@ -66,5 +66,14 @@ public class Stack {
     }
 
     public boolean contains(int n) {
+        if (empty()){
+            return false;
+        }
+        for (int i = 0; i < stack.length; i++) {
+            if (stack[i] == n){
+                return true;
+            }
+        }
+        return false;
     }
 }

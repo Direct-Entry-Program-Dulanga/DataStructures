@@ -24,5 +24,7 @@ public class Test {
         stack.clear();
         stack.print();
 
+        System.out.println("constains: "+stack.contains(40));
+
     }
 }
