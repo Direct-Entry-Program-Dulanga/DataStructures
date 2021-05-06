@@ -9,6 +9,9 @@ public class Test {
         stack.push(50);
         stack.push(60);
         System.out.println(stack.empty());
+        System.out.println("");
+        System.out.println("Size: "+stack.size());
+        System.out.println("");
         stack.print();
         stack.pop();
         stack.pop();
