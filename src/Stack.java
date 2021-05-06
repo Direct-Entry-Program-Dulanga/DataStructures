@@ -20,6 +20,17 @@ public class Stack {
     }
 
     public void pop(){
+        if (stack == null) {
+            System.out.println("Can't pop");
+        } else if (stack.length == 1) {
+            stack = null;
+        } else {
+            int[] temp = new int[stack.length - 1];
+            for (int i = 0; i < temp.length; i++) {
+                temp[i] = stack[i];
+            }
+            stack = temp;
+        }
 
     }
 
